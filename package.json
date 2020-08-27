@@ -1,12 +1,22 @@
 {
   "name": "platzi-overflow",
   "version": "1.0.0",
-  "description": "",
+  "description": "Working with hapi",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": "hapi",
+  "keywords": [
+    "hapi"
+  ],
   "author": "Carlos Gutierrez",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarGDev/platzi-overflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CarGDev/platzi-overflow/issues"
+  },
+  "homepage": "https://github.com/CarGDev/platzi-overflow#readme"
 }
