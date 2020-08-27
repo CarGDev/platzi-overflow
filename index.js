@@ -12,9 +12,18 @@ async function init () {
     method: 'GET',
     path: '/',
     handler: (req, h) => {
-      return 'Connected'
+      return h.response('Hola mundo').code(200)
     }
   })
+
+  server.route({
+    method: 'GET',
+    path: '/redirect',
+    handler: (req, h) => {
+      return h.response('http://platzi.com')
+    }
+  })
+
   try {
     await server.start()
   } catch (error) {

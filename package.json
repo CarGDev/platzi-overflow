@@ -25,7 +25,9 @@
   "dependencies": {
     "@hapi/hapi": "^20.0.0",
     "hapi": "^18.1.0",
-    "lint": "^0.7.0",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0"
   }
 }
