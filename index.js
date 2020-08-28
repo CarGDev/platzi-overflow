@@ -28,13 +28,37 @@ async function init () {
       relativeTo: __dirname,
       path: 'views',
       layout: true,
-      layoutPath: 'view'
+      layoutPath: 'views'
     })
     server.route({
       method: 'GET',
-      path: '/home',
+      path: '/',
       handler: (req, h) => {
-        return h.file('index.html')
+        return h.view('index', {
+          title: 'home'
+        })
+      }
+    })
+
+    server.route({
+      method: 'GET',
+      path: '/register',
+      handler: (req, h) => {
+        return h.view('register', {
+          title: 'Registro'
+        })
+      }
+    })
+
+    server.route({
+      method: 'POST',
+      path: '/create-user',
+      handler: (req, h) => {
+        console.log(req.payload)
+        return 'Usuario Creado'
+        /* return h.view('register', {
+          title: 'Registro'
+        }) */
       }
     })
 
@@ -48,6 +72,7 @@ async function init () {
         }
       }
     })
+
     await server.start()
   } catch (error) {
     console.error(error)
